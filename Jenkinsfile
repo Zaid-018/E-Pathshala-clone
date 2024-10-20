@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        deployDir = '/var/www/my-app' // Change to your deployment directory
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
@@ -22,9 +26,6 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Define the deployment directory and server (adjust as necessary)
-                def deployDir = '/var/www/my-app' // Change to your deployment directory
-
                 // Copy the build files to the deployment directory
                 sh "cp -r build/* ${deployDir}/"
 
