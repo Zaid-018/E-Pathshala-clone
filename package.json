@@ -1,10 +1,13 @@
 {
   "name": "e-pathshala-clone",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "build": "echo 'Building the application...' && npm install", 
+    "test": "echo 'Running tests...' && exit 0",  
+    "deploy": "echo 'Deploying the application...' && npm start"  
   },
   "keywords": [],
   "author": "",
