@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    
+    tools {nodejs "node"}
+    
     environment {
         deployDir = '/var/www/my-app' // Change to your deployment directory
     }
@@ -14,7 +16,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh 'npm build'
                
             }
         }
